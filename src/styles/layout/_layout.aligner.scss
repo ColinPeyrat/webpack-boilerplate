@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #ALIGNER
+   ========================================================================== */
+
+.l-aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.l-aligner-item--top {
+  align-self: flex-start;
+}
+
+.l-aligner-item--bottom {
+  align-self: flex-end;
+}

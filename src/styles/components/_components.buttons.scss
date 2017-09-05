@@ -1,0 +1,64 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+.c-btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid $white;
+  border-radius: 5em;
+  z-index: 0;
+  position: relative;
+  padding: 1em 2em;
+  margin: 0;
+  color: $white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s $easeOutQuad 0.025s;
+
+  &:before {
+    display: none;
+  }
+
+  &:after {
+    @include pseudo;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 250%;
+    border-radius: 50%;
+    transform: translate3d(100%, -50%, 0);
+    transform-origin: top right;
+    transition: transform 0.2s $easeOutQuad;
+    background-color: $mid-grey;
+  }
+
+  &:hover,
+  &:active {
+    border-color: $mid-grey;
+
+    &:after {
+      transform: translate3d(0, -50%, 0) rotate(0deg);
+    }
+  }
+}
+
+.c-btn--primary {
+  border-color: $primary-color;
+  background-color: $primary-color;
+
+  &:after {
+    display: none;
+  }
+
+  &:hover,
+  &:active {
+    border-color: $primary-color;
+  }
+}

@@ -1,0 +1,27 @@
+/* ==========================================================================
+   #GLOBAL
+   ========================================================================== */
+
+
+/* Colors.
+   ========================================================================== */
+$white: #fff;
+$grey: #4A4A4A;
+$mid-grey: #333333;
+$dark-grey: #12162D;
+$black: #000;
+$orange: #E88565;
+
+$primary-color: $orange;
+$text-color: $mid-grey;
+
+/* Font families.
+   ========================================================================== */
+$text-font-stack: 'Montserrat', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/* Layout settings.
+   ========================================================================== */
+$fractions: 1 2 3 4 !default;
+$widths-delimiter: \/ !default;
+$widths-breakpoint-separator: \@ !default;
+$breakpoints: (small: 320px, medium: 768px, large: 1024px);
