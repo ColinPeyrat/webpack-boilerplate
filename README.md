@@ -5,6 +5,8 @@ My boilerplate for front-end projects
 ## Contains
 - [x] [Webpack](https://webpack.github.io) (with CSS hot reload)
 - [x] [Sass](http://sass-lang.com/)
+- [x] [PostCSS](http://postcss.org/)
+- [x] [Autoprefixer](https://github.com/postcss/autoprefixer)
 
 ## Setup
 

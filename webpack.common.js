@@ -6,7 +6,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const isDev = process.env.NODE_ENV !== 'production';
 
-console.log(isDev);
+const postcss = {
+  plugins: [require('autoprefixer')()]
+};
 
 module.exports = {
   entry: {
@@ -18,7 +20,16 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [require('autoprefixer')()]
+              }
+            },
+            'sass-loader'
+          ]
         })
       }
     ]
